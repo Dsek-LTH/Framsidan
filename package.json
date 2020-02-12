@@ -1,0 +1,20 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "author": "dwww",
+  "license": "MIT",
+  "description": "The landing page for the D-guild",
+  "repository": {
+    "url": "https://github.com/Dsek-LTH/landing-page"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "servor": "^3.1.0",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "compile": "tsc --project tsconfig.json -w",
+    "serve": "servor src",
+    "dev": "concurrently -n 'serve,tsc' 'servor --reload' 'yarn compile'"
+  }
+}
