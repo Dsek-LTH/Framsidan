@@ -2,7 +2,7 @@
 FROM node
 
 # Set directory for the app ´
-WORKDIR /usr/src/app
+WORKDIR /usr
 
 # Copy the proram into container
 COPY . .
