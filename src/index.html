@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="swe">
-    <head>
-        <title>dsek 2.0</title>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, intital-scale=1.0">
-    </head>
-    <body>
-        
-        <nav class="navbar">
-            <img class="logo" src="pictures/D-symbol.svg" alt="D-sek symbol">
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-                <ul>
-                    <li><a href="#">Om sektionen</a></li>
-                    <li>|</li>
-                    <li><a href="https://www.dsek.se/sektionen/indm/for_foretag/">För företag</a></li>
-                    <li>|</li>
-                    <li><a href="#">Medlem</a></li>
-                </ul>
-            </div>
-        </nav>    
+  <head>
+    <title>dsek 2.0</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <meta name="viewport" content="width=device-width, intital-scale=1.0" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img class="logo" src="pictures/D-symbol.svg" alt="D-sek symbol" />
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Om sektionen</a></li>
+          <li>|</li>
+          <li>
+            <a href="https://www.dsek.se/sektionen/indm/for_foretag/"
+              >För företag</a
+            >
+          </li>
+          <li>|</li>
+          <li><a href="#">Medlem</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <header class="main-header">
-            <div>D-sektionen inom TLTH</div>
-            <div>Datateknik && Information- och kommunikationsteknik</div>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem 
-                consectetur beatae expedita quis nobis laboriosam autem illum veniam 
-                necessitatibus nostrum! Reprehenderit deserunt ullam at sit. Inventore 
-                qui necessitatibus aspernatur. Eveniet.
-            </div>
-        </header>   
-        <div class="main-content"></div>
-        <div class="footer"></div>
-    </body>
+    <header class="main-header">
+      <div>D-sektionen inom TLTH</div>
+      <div>Datateknik && Information- och kommunikationsteknik</div>
+      <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+          consectetur beatae expedita quis nobis laboriosam autem illum veniam
+          necessitatibus nostrum! Reprehenderit deserunt ullam at sit. Inventore
+          qui necessitatibus aspernatur. Eveniet.
+      </div>
+    </header>
+    <div class="main-content"></div>
+    <div class="footer">
+      <button id="feedback-form">Rapportera problem med sidan</button>
+    </div>
+  </body>
+  <script
+    id="zammad_form_script"
+    src="https://zammad.lavender.blossom.dsek.se/assets/form/form.js"
+  ></script>
+  <script>
+    $(function() {
+      $("#feedback-form").ZammadForm({
+        messageTitle: "Feedback Form",
+        messageSubmit: "Submit",
+        messageThankYou:
+          "Thank you for your inquiry (#%s)! We'll contact you as soon as possible.",
+        showTitle: true,
+        modal: true
+      });
+    });
+  </script>
 </html>
-
-
