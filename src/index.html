@@ -2,9 +2,13 @@
 <html lang="swe">
   <head>
     <title>dsek 2.0</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <meta charset="utf-8" />
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, intital-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans&display=swap" rel="stylesheet"> 
   </head>
@@ -52,9 +56,37 @@
       </p>
     </header>
     <div class="main-content"></div>
-    <div class="footer">
-      <button id="feedback-form">Rapportera problem med sidan</button>
-    </div>
+    <footer>
+      <div class="content">
+        <p>D-sektionen inom TLTH</p>
+        <p><a href="#">Kontakta oss</a></p>
+        <div class="address">
+          Besöksadress:<br>
+          E-huset<br>
+          Ole Römers väg 3<br>
+          22363 LUND
+        </div>
+        <div class="address">
+          Postadress:<br>
+          D-sektionen inom TLTH <br>
+          Box 118 <br>
+          22100 LUND
+        </div>
+        <p>Organisationsnummer: 845003-2878</p>
+        <button id="feedback-form">Ge feedback på sidan</button>
+      </div>
+      <div class="divider"></div>
+      <div class="content">
+        <ul class="social-media">
+          <li><a target="_blank" href="https://facebook.com/Dsektionen/"><img src="pictures/logo-facebook.svg"></img><span>facebook.com/Dsektionen/</span></a></li>
+          <li><a target="_blank" href="https://instagram.com/dseklth/"><img src="pictures/logo-instagram.svg"></img><span>instagram.com/dseklth/</span></a></li>
+          <li><a target="_blank" href="https://linkedin.com/company/datatekniksektionen-vid-tlth/"><img src="pictures/logo-linkedin.svg"></img><span>linkedin.com/company/datatekniksektionen-vid-tlth/</span></a></li>
+          <li><a target="_blank" href="https://youtube.com/channel/UCqBtN7xlh4_VvywKaRiGfkw"><img src="pictures/logo-youtube.svg"></img><span>youtube.com/channel/UCqBtN7xlh4_VvywKaRiGfkw</span></a></li>
+          <li><a target="_blank" href="https://github.com/Dsek-LTH"><img src="pictures/logo-github.svg"></img><span>github.com/Dsek-LTH</span></a></li>
+        </ul>
+        <p><a target="_blank" href="https://github.com/Dsek-LTH/landing-page/">källkod</a> | © D-sektionen inom TLTH, 2020</p>
+      </div>
+    </footer>
   </body>
   <script
     id="zammad_form_script"
@@ -63,10 +95,10 @@
   <script>
     $(function() {
       $("#feedback-form").ZammadForm({
-        messageTitle: "Feedback Form",
-        messageSubmit: "Submit",
+        messageTitle: "Feedback",
+        messageSubmit: "Skicka",
         messageThankYou:
-          "Thank you for your inquiry (#%s)! We'll contact you as soon as possible.",
+          "Tack för att du skickade in feedback, (#%s)!",
         showTitle: true,
         modal: true
       });
