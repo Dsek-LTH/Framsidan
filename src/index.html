@@ -73,7 +73,7 @@
           22100 LUND
         </div>
         <p>Organisationsnummer: 845003-2878</p>
-        <button id="feedback-form">Rapportera problem med sidan</button>
+        <button id="feedback-form">Ge feedback på sidan</button>
       </div>
       <div class="divider"></div>
       <div class="content">
@@ -95,10 +95,10 @@
   <script>
     $(function() {
       $("#feedback-form").ZammadForm({
-        messageTitle: "Feedback Form",
-        messageSubmit: "Submit",
+        messageTitle: "Feedback",
+        messageSubmit: "Skicka",
         messageThankYou:
-          "Thank you for your inquiry (#%s)! We'll contact you as soon as possible.",
+          "Tack för att du skickade in feedback, (#%s)!",
         showTitle: true,
         modal: true
       });
