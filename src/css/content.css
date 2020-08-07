@@ -35,7 +35,7 @@
 @media (max-width: 700px){
     .main-header {
         font-size: 16px;
-        padding: 0 32px;
+            padding: 0 32px;
         margin: 0 auto;
     }
 
@@ -50,6 +50,6 @@
     }
 
     .main-header p {
-        line-height: 1.2em;
+                 line-height: 1.2em;
     }
 }
