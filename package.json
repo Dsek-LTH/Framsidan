@@ -9,12 +9,37 @@
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-css-modules": "^2.11.0",
+    "eslint-plugin-html": "^6.0.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "servor": "^3.1.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
     "compile": "tsc --project tsconfig.json -w",
     "serve": "servor src",
+    "lint:html": "eslint ./src --ext .html",
+    "lint:css": "stylelint  ./src/**/*.css --syntax css",
     "dev": "concurrently -n 'serve,tsc' 'servor --reload' 'yarn compile'"
+  },
+  "lint-staged": {
+    "src/**/*.html": [
+      "eslint ./src --ext .html --fix",
+      "git add"
+    ],
+    "src/**/*.css": [
+      "stylelint --syntax css --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
