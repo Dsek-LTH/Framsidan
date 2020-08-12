@@ -31,15 +31,14 @@
   },
   "lint-staged": {
     "./src/**/*.html": [
-      "eslint ./src --ext .html --fix",
+      "ilnt:html:fix",
       "git add"
     ],
     "./src/**/*.css": [
-      "stylelint --syntax css --fix",
+      "lint:css:fix",
       "git add"
     ],
-    "*.js": "eslint --cache --fix",
-    "*.css": "stylelint --fix"
+    "*.js": ["eslint --cache --fix", "git add"]
   },
   "husky": {
     "hooks": {
