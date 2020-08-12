@@ -30,8 +30,8 @@
     "dev": "concurrently -n 'serve,tsc' 'servor --reload' 'yarn compile'"
   },
   "lint-staged": {
-    "./src/**/*.html": "ilnt:html:fix",
-    "./src/**/*.css": "lint:css:fix",
+    "./src/**/*.html": "npm run lint:html:fix",
+    "./src/**/*.css": "npm run lint:css:fix",
     "*.js": "eslint --cache --fix"
   },
   "husky": {
