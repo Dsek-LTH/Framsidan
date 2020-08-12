@@ -24,18 +24,15 @@
     "compile": "tsc --project tsconfig.json -w",
     "serve": "servor src",
     "lint:html": "eslint ./src --ext .html",
+    "lint:html:fix": "eslint ./src --ext .html --fix",
     "lint:css": "stylelint  ./src/**/*.css --syntax css",
+    "lint:css:fix": "stylelint ./src/**/*.css --syntax css --fix",
     "dev": "concurrently -n 'serve,tsc' 'servor --reload' 'yarn compile'"
   },
   "lint-staged": {
-    "src/**/*.html": [
-      "eslint ./src --ext .html --fix",
-      "git add"
-    ],
-    "src/**/*.css": [
-      "stylelint --syntax css --fix",
-      "git add"
-    ]
+    "./src/**/*.html": "npm run lint:html:fix",
+    "./src/**/*.css": "npm run lint:css:fix",
+    "*.js": "eslint --cache --fix"
   },
   "husky": {
     "hooks": {
