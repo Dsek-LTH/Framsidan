@@ -21,6 +21,15 @@
   font-size: 1.2em;
 }
 
+.navbar-links li::after {
+  content: '|';
+}
+
+.navbar-links li:last-child::after {
+  content: '';
+  display: none;
+}
+
 .navbar-links a {
   text-decoration: none;
   text-align: center;
@@ -28,27 +37,21 @@
   color: rgb(68, 68, 68);
 }
 
-.bar {
-  height: 0.05rem;
-  width: 100%;
-  background-color: rgb(112, 112, 112);
-  border-radius: 5px;
-}
-
 @media (max-width: 700px) {
   .navbar {
     padding: 36px;
   }
 
+  .navbar-links li::after {
+    content: '';
+    width: 100%;
+    display: block;
+    border-bottom: 0.05rem solid rgb(112, 112, 112);
+    border-radius: 5px;
+    margin: 11px 0;
+  }
+
   .navbar-links ul {
     display: inline-block;
-  }
-
-  .bar {
-    display: inline-block;
-  }
-
-  .pipe {
-    display: none;
   }
 }
