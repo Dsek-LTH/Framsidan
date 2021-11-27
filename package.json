@@ -8,7 +8,7 @@
     "url": "https://github.com/Dsek-LTH/landing-page"
   },
   "devDependencies": {
-    "concurrently": "^5.1.0",
+    "concurrently": "^6.4.0",
     "eslint": "^7.6.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-css-modules": "^2.11.0",
