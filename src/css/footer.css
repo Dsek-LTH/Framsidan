@@ -24,12 +24,9 @@ footer .address {
 }
 
 footer .social-media {
+  display: flex;
   list-style: none;
   padding: 0;
-}
-
-footer .social-media a {
-  display: inline-block;
 }
 
 footer .social-media img {
@@ -37,8 +34,16 @@ footer .social-media img {
   vertical-align: middle;
 }
 
-footer .social-media span {
-  margin-right: 16px;
+footer .content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+footer .right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 @media (max-width: 800px) {
