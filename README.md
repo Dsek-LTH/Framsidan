@@ -1,5 +1,5 @@
 # Landing page
-This repository contains the webpage user will be met by when going to dsek.se, currently available at beta.dsek.se.
+This repository contains the webpage user will be met by when going to dsek.se, currently available at new.dsek.se.
 
 It is directed towards new students and companies and contains links to pages relevant to current students at the D-guild.
 
